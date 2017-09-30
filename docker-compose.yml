@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  hello-docker-react:
+    build: Dockerfile
+    container_name: docker-react-test-2
+    entrypoint: sh entrypoint.sh
+    working_dir: /home/node
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/home/node
